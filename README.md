@@ -194,14 +194,16 @@ Questions :
 - Combien d’hôtes max ?  128
 - Quelle plage IP valide ?  192.168.10.0 - 192.168.10.126
 - Peut-on encore communiquer avec VLAN 20 ?
-Oui si le routeur est présent.
+Oui si le routeur est présent. les ping passe bien
 ---
 
 # 🚀 Extensions
 
 - Ajouter VLAN 30  
 - Mettre un DHCP par VLAN  
-  
+
+  <img width="1784" height="400" alt="image" src="https://github.com/user-attachments/assets/85a433fd-11f5-48f7-a974-24f55d9db1db" />
+
 ---
 
 # 📝 Évaluation (/20)
