@@ -171,10 +171,14 @@ PC1 → PC3
 
 # ❓ Questions de réflexion
 
-1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md 
-2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md  
-3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
+1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md
+   Le PC 1 ne voit pas le routeur dans le PC 3 car le masque empêche de voir les appareils d'un autre réseau au sein du switch. Le routeur, on lui gère les différents réseaux, fait des routes dynamiques entre les réseaux.
+2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md
+Le masque en /24 255.255.255.0 indique que l'identifiant réseau est finit sur le troisième octet donc sur 192.168.10.20 le X.10 est l'ID réseaux. si les pc sont dans un autres réseaux le masque fait donc que les pc qui sont en .20 ne peuvent se voir.
+3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md
+   Il y'aurait un conflit d'IP. Et puis dans tous les cas si jamais on mettait un addresse IP en .10.X dans le .20.X alors il ne pourrait même pas voir la machine.
 4. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
+Le trunk est nécéssaire car il permet de faire passé plus VLAN au sein d'un même lien de connxion entre deux équipement.
 
 ---
 
@@ -187,10 +191,10 @@ Changer VLAN 10 en :
 ```
 
 Questions :
-- Combien d’hôtes max ?  
-- Quelle plage IP valide ?  
+- Combien d’hôtes max ?  128
+- Quelle plage IP valide ?  192.168.10.0 - 192.168.10.126
 - Peut-on encore communiquer avec VLAN 20 ?
-
+Oui si le routeur est présent.
 ---
 
 # 🚀 Extensions
